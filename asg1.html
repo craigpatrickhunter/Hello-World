@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="asg1.css">
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+     
+
+    <BR>
+    <button onclick="clearCanvas()">Clear</button>
+    <button onclick="setPoints()">Points</button>
+    <button onclick="setTriangles()">Triangles</button>
+    <button onclick="setCircles()">Circles</button>
+
+    <BR>
+    <!-- Red Slider -->
+    <Pre>Red:     </Pre>
+    <input type="range" name="redRangeInput" min="0.0" max="1.0" value="0.5" step="0.01" onchange="updateRedTextInput(this.value);">
+    <input type="text" id="redTextInput" value="0.5">
+
+    <BR>
+    <!-- Green Slider -->
+    <Pre>Green:   </Pre>
+    <input type="range" name="greenRangeInput" min="0.0" max="1.0" value="0.5" step="0.01" onchange="updateGreenTextInput(this.value);">
+    <input type="text" id="greenTextInput" value="0.5">
+
+    <BR>
+    <!-- Blue Slider -->
+    <Pre>Blue:    </Pre>
+    <input type="range" name="blueRangeInput" min="0" max="1.0" value="0.5" step="0.01" onchange="updateBlueTextInput(this.value);">
+    <input type="text" id="blueTextInput" value="0.5">
+
+    <BR>
+    <!-- Size Slider -->
+    <Pre>Size:    </Pre>
+    <input type="range" name="sizeRangeInput" min="2" max="100" value="10" step="1" onchange="updateSizeTextInput(this.value);">
+    <input type="text" id="sizeTextInput" value="10">
+
+    <BR>
+    <!-- Num Segment Slider -->
+    <Pre>Segments:</Pre>
+    <input type="range" name="segmentsRangeInput" min="3" max="36" value="12" step="1" onchange="updateSegmentsTextInput(this.value);">
+    <input type="text" id="segmentsTextInput" value="12">
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="PointsList.js"></script>
+    <script src="asg1.js"></script>
+  </body>
+</html>
